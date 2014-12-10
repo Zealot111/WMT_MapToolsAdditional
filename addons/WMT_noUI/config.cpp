@@ -19,7 +19,7 @@ class CfgAddons {
 
 class CfgFunctions
 {
-	class WMT
+	class WMT_Add
 	{
 		class Main
 		{
