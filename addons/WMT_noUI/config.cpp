@@ -181,25 +181,57 @@ class RscDisplayOptionsVideo {
 	};
 };
 
+
+class RscActiveText;class RscDisplayMainMap;
 class RscDisplayGetReady: RscDisplayMainMap{
-	class controls{
-		class TopRight: RscControlsGroup{
-			class controls{
+	class Controls{
+        class TopRight: RscControlsGroup{
+            class controls{
                 class ButtonPlayer: RscActiveText{
-					onbuttonclick = "";
-					style = 48;
-					color[] = {0,0,0,0};
-					text =  "\WMT_noUI\empty.paa";
-					x = "13.5 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
-					y = "0.2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-					w = "1.1 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
-					h = "1.1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-					colorText[] = {0,0,0,0};
-					colorActive[] = {0,0,0,0};
-					tooltip = "";
-				};
+                    onbuttonclick = "";
+                    color[] = {0,0,0,0};
+                    text =  "\WMT_noUI\empty.paa";
+                    colorText[] = {0,0,0,0};
+                    colorActive[] = {0,0,0,0};
+                    tooltip = "";
+                };
             };
         };
     };
 };
+
+class RscDisplayServerGetReady: RscDisplayGetReady{
+	class Controls{
+        class TopRight: RscControlsGroup{
+            class controls{
+                class ButtonPlayer: RscActiveText{
+                    onbuttonclick = "";
+                    color[] = {0,0,0,0};
+                    text =  "\WMT_noUI\empty.paa";
+                    colorText[] = {0,0,0,0};
+                    colorActive[] = {0,0,0,0};
+                    tooltip = "";
+                };
+            };
+        };
+    };
+};
+
+class RscDisplayClientGetReady: RscDisplayGetReady{
+	class Controls{
+        class TopRight: RscControlsGroup{
+            class controls{
+                class ButtonPlayer: RscActiveText{
+                    onbuttonclick = "";
+                    color[] = {0,0,0,0};
+                    text =  "\WMT_noUI\empty.paa";
+                    colorText[] = {0,0,0,0};
+                    colorActive[] = {0,0,0,0};
+                    tooltip = "";
+                };
+            };
+        };
+    };
+};
+
 //};
