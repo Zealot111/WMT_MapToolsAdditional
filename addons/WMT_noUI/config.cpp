@@ -1,22 +1,27 @@
-class CfgPatches {
-	class WMT_noUI {
+class CfgPatches
+{
+	class WMT_noUI
+	{
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Dubbing_Radio_F", "A3_UI_F"};
+		requiredAddons[] = {"A3_Dubbing_Radio_F","A3_UI_F"};
 		author = "Zealot";
 		authorUrl = "https://github.com/Zealot111/WMT_MapToolsAdditional";
+		magazines[] = {};
+		ammo[] = {};
 	};
 };
-
-class CfgAddons {
-    class PreloadAddons {
-       class WMT_noUI {
-          list[] = {"WMT_noUI"};
-       };
-    };
+class CfgAddons
+{
+	class PreloadAddons
+	{
+		class WMT_noUI
+		{
+			list[] = {"WMT_noUI"};
+		};
+	};
 };
-
 class CfgFunctions
 {
 	class WMT_Add
@@ -24,21 +29,26 @@ class CfgFunctions
 		class Main
 		{
 			file = "WMT_noUI";
-			class init_file{postInit=1;};
+			class init_file
+			{
+				postInit = 1;
+			};
 		};
 	};
 };
-
-
-class CfgVoice {
+class CfgVoice
+{
 	class Base;
-	class ENG : Base {
+	class ENG: Base
+	{
 		protocol = "";
 	};
-	class ENGB : Base {
+	class ENGB: Base
+	{
 		protocol = "";
 	};
-	class GRE: Base {
+	class GRE: Base
+	{
 		protocol = "";
 	};
 	class PER: Base
@@ -50,14 +60,34 @@ class CfgVoice {
 		protocol = "";
 	};
 };
-
-class cfgInGameUI {
-	class CommandBar {
+class cfgInGameUI
+{
+	class CommandBar
+	{
 		left = 0;
 		top = 7777;
 	};
+	class Cursor
+	{
+		select = "\WMT_noUI\empty.paa";
+		leader = "\WMT_noUI\empty.paa";
+		mission = "\WMT_noUI\empty.paa";
+		customMark = "\WMT_noUI\empty.paa";
+		outArrow = "\WMT_noUI\empty.paa";
+		selectColor[] = {0,0,0,0};
+		leaderColor[] = {0,0,0,0};
+		customMarkColor[] = {0,0,0,0};
+	};
+	class PeripheralVision
+	{
+		cueTexture = "A3\ui_f\data\igui\cfg\PeripheralVision\cueTexture_gs.paa";
+		bloodTexture = "A3\ui_f\data\igui\cfg\PeripheralVision\bloodTexture_ca.paa";
+		bloodColor[] = {1,1,1,0.75};
+		cueColor[] = {0,0,0,0};
+		cueEnemyColor[] = {0,0,0,0};
+		cueFriendlyColor[] = {0,0,0,0};
+	};
 };
-
 class RscMapControl
 {
 	maxSatelliteAlpha = 0.55;
@@ -73,21 +103,25 @@ class RscMapControl
 	colorMainRoads[] = {0.0,0.0,0.0,1};
 	colorMainRoadsFill[] = {1,0.62,0.43,1};
 };
-
-class CfgDiary  {
-	class FixedPages  {
-		class Units  {
+class CfgDiary
+{
+	class FixedPages
+	{
+		class Units
+		{
 			type = "";
 		};
-		class Statistics  {
+		class Statistics
+		{
 			type = "";
 		};
 	};
-	class Icons  {
+	class Icons
+	{
 		playerWest = "A3\ui_f\data\map\diary\icons\playerUnknown_ca.paa";
 		playerEast = "A3\ui_f\data\map\diary\icons\playerUnknown_ca.paa";
 		playerCiv = "A3\ui_f\data\map\diary\icons\playerUnknown_ca.paa";
 		playerGuer = "A3\ui_f\data\map\diary\icons\playerUnknown_ca.paa";
 	};
 };
-
+//};
