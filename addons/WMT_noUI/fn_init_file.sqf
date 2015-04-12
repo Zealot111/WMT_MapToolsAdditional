@@ -21,6 +21,7 @@ if (!isServer) exitWith{};
                 waitUntil {!isNil "WMT_Global_PatchesNames"};
                 _diff = +(WMT_Global_PatchesNames);
                 {_diff = _diff - [_x];} forEach _patchesNames;
+                _diff = _diff - ["AiA_BaseConfig_F"];
                 if (count _diff != 0) then {
                     [[[name player, getPlayerUid player,_diff], {diag_log ["ZLTCHECKPBO",_this];}], "bis_fnc_spawn",false] call bis_fnc_mp;
                     diag_log ["ZLTCHECKPBO",[name player, getPlayerUid player,_diff]];
