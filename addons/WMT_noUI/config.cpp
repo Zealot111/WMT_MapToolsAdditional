@@ -1,3 +1,12 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.97
+//Sun Apr 12 17:25:28 2015 : Source 'file' date Sun Apr 12 17:25:28 2015
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class WMT_noUI2 : config.bin{
 class CfgPatches
 {
 	class WMT_noUI
@@ -123,5 +132,74 @@ class CfgDiary
 		playerCiv = "A3\ui_f\data\map\diary\icons\playerUnknown_ca.paa";
 		playerGuer = "A3\ui_f\data\map\diary\icons\playerUnknown_ca.paa";
 	};
+};
+
+class RscControlsGroup;class RscXSliderH;class RscEdit;class CA_TextDisplayMode; class RscText;
+
+class RscDisplayOptionsVideo {
+	class Controls {
+		class QualityGroup: RscControlsGroup{
+			class controls{
+				class CA_SliderBrightness: RscText{
+					idc = 112;
+					x = "8 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+					y = "8.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					w = "8 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+					h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					text = "Для медвежат";
+					tooltip = "Перезайдите без модов RBC чтобы отредактировать яркость";
+				};
+				class CA_ValueBrightness: RscText{
+					idc = 111;
+					style = 0;
+					x = "16.2 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+					y = "8.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					w = "2.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+					h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					tooltip = "Перезайдите в игру без модов RBC чтобы отредактировать яркость";
+				};
+				class CA_SliderGamma: RscText{
+					idc = 110;
+					x = "8 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+					y = "10 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					w = "8 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+					h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					tooltip = "Перезайдите в игру без модов RBC чтобы отредактировать гамму";
+					text = "Для медвежат";
+				};
+				class CA_ValueGamma: RscText{
+					idc = 109;
+					style = 0;
+					x = "16.2 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+					y = "10 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					w = "2.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
+					h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					tooltip = "Перезайдите в игру без модов RBC чтобы отредактировать гамму";
+				};
+		    };
+		};
+	};
+};
+
+class RscDisplayGetReady: RscDisplayMainMap{
+	class controls{
+		class TopRight: RscControlsGroup{
+			class controls{
+                class ButtonPlayer: RscActiveText{
+					onbuttonclick = "";
+					style = 48;
+					color[] = {0,0,0,0};
+					text =  "\WMT_noUI\empty.paa";
+					x = "13.5 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+					y = "0.2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					w = "1.1 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
+					h = "1.1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+					colorText[] = {0,0,0,0};
+					colorActive[] = {0,0,0,0};
+					tooltip = "";
+				};
+            };
+        };
+    };
 };
 //};
