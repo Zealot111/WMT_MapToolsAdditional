@@ -146,8 +146,8 @@ class RscDisplayOptionsVideo {
 					y = "8.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 					w = "8 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 					h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-					text = "Для медвежат";
-					tooltip = "Перезайдите без модов RBC чтобы отредактировать яркость";
+					text = "Для нубасов";
+					tooltip = "Перезайдите без модов WMT чтобы отредактировать яркость";
 				};
 				class CA_ValueBrightness: RscText{
 					idc = 111;
@@ -156,7 +156,7 @@ class RscDisplayOptionsVideo {
 					y = "8.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 					w = "2.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 					h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-					tooltip = "Перезайдите в игру без модов RBC чтобы отредактировать яркость";
+					tooltip = "Перезайдите в игру без модов WMT чтобы отредактировать яркость";
 				};
 				class CA_SliderGamma: RscText{
 					idc = 110;
@@ -164,8 +164,8 @@ class RscDisplayOptionsVideo {
 					y = "10 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 					w = "8 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 					h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-					tooltip = "Перезайдите в игру без модов RBC чтобы отредактировать гамму";
-					text = "Для медвежат";
+					tooltip = "Перезайдите в игру без модов WMT чтобы отредактировать гамму";
+					text = "Для нубасов";
 				};
 				class CA_ValueGamma: RscText{
 					idc = 109;
@@ -174,7 +174,7 @@ class RscDisplayOptionsVideo {
 					y = "10 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 					w = "2.5 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 					h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-					tooltip = "Перезайдите в игру без модов RBC чтобы отредактировать гамму";
+					tooltip = "Перезайдите в игру без модов WMT чтобы отредактировать гамму";
 				};
 		    };
 		};
