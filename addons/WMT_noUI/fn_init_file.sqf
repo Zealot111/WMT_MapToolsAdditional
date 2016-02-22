@@ -25,6 +25,7 @@ if (!isServer) exitWith{};
                 if (count _diff != 0) then {
                     [[[name player, getPlayerUid player,_diff], {diag_log ["ZLTCHECKPBO",_this];}], "bis_fnc_spawn",false] call bis_fnc_mp;
                     diag_log ["ZLTCHECKPBO",[name player, getPlayerUid player,_diff]];
+                    // should be tested
                     // serverCommand format["#kick %1",getPlayerUid player];
                 };
             }], "bis_fnc_spawn",_x] call bis_fnc_mp;
