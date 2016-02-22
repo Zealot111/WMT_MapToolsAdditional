@@ -6,7 +6,7 @@ if (!isServer) exitWith{};
     private "_patches";
     _patches = [configFile >> "CfgPatches", 2, true, true] call BIS_fnc_returnChildren;
     {WMT_Global_PatchesNames pushBack (configName _x);} forEach _patches;
-    WMT_Global_PatchesNames = WMT_Global_PatchesNames - ["AiA_BaseConfig_F"];
+    WMT_Global_PatchesNames = WMT_Global_PatchesNames - ["AiA_BaseConfig_F","CUP_ibr_plants"];
     publicVariable "WMT_Global_PatchesNames";
     sleep 15;
     zlt_pbo_checked = [];
@@ -25,6 +25,7 @@ if (!isServer) exitWith{};
                 if (count _diff != 0) then {
                     [[[name player, getPlayerUid player,_diff], {diag_log ["ZLTCHECKPBO",_this];}], "bis_fnc_spawn",false] call bis_fnc_mp;
                     diag_log ["ZLTCHECKPBO",[name player, getPlayerUid player,_diff]];
+                    // serverCommand format["#kick %1",getPlayerUid player];
                 };
             }], "bis_fnc_spawn",_x] call bis_fnc_mp;
             zlt_pbo_checked pushBack (getplayerUid _x);
