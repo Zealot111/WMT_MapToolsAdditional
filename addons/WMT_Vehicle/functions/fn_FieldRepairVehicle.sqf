@@ -1,11 +1,11 @@
 /*
  	Name: WMT_fnc_FieldRepairVehicle
- 	
+
  	Author(s):
 		Zealot
 
  	Description:
-		Field repair 
+		Field repair
 
 	Parameters:
 		0: OBJECT
@@ -20,7 +20,7 @@
 #define DEFAULT_FIELDREPAIR_EACH_PART_TIME 30
 #define DEFAULT_FIELDREPAIR_EACH_HARDPART_TIME 100
 #define DISTANCE_TO_REPAIRVEHICLE 15
-		
+
 PR(_fnc_hastk) = {
 	private ["_ret","_objs","_truck"];
 	_ret = 0;
@@ -72,7 +72,7 @@ PR(_hastk) = [] call _fnc_hastk;
 
 if ( _hastk == 0 ) exitWith {localize("STR_NEED_TOOLKIT") call WMT_fnc_NotifyText;};
 
-WMT_mutexAction = true;  
+WMT_mutexAction = true;
 PR(_repairFinished)  = false;
 PR(_lastPlayerState) = animationState player;
 PR(_vehname) 		 = getText ( configFile >> "CfgVehicles" >> typeOf(_veh) >> "displayName");
@@ -82,17 +82,17 @@ PR(_startPos)		 = getPos player;
 [true] call WMT_fnc_ProgressBar;
 
 while {(alive player) and ((player distance _startPos) < 0.4) and ((player distance _veh) < DISTANCE_TO_REPAIRVEHICLE) and (vehicle player == player) and (speed _veh < 3) and (not _repairFinished) and WMT_mutexAction} do {
-	//Check toolkit 
+	//Check toolkit
 	_hastk = [] call _fnc_hastk;
 	if (_hastk <= 0) exitWith {localize("STR_NEED_TOOLKIT") call WMT_fnc_NotifyText; sleep 1.;};
 
-	// Calculate repair time 
-	PR(_repairTime) = [_veh] call _fnc_getPartsRepairTime;	
+	// Calculate repair time
+	PR(_repairTime) = [_veh] call _fnc_getPartsRepairTime;
 
 	// Show progress bar
 	[_length/_repairTime] call WMT_fnc_ProgressBar;
 
-	// Finish repair 
+	// Finish repair
 	if (_repairTime <= _length) exitWith {_repairFinished = true;};
 
 	_length = _length + 0.5;
@@ -103,14 +103,15 @@ while {(alive player) and ((player distance _startPos) < 0.4) and ((player dista
 if (_repairFinished) then {
 	_hastk = [] call _fnc_hastk;
 
-	if (_hastk == 0) exitWith {localize("STR_NEED_TOOLKIT") call WMT_fnc_NotifyText; sleep 1.;};	
+	if (_hastk == 0) exitWith {localize("STR_NEED_TOOLKIT") call WMT_fnc_NotifyText; sleep 1.;};
 
 	[_veh,"WMT_fnc_partrepair", _veh] call bis_fnc_MP;
 
+/*
 	switch (_hastk) do {
 		case 1: {player removeItem "ToolKit";};
 		case 2: {["ToolKit",_veh] call _fnc_removeitemfromcargo;};
-	};
+	};*/
 
 	_veh setVariable["wmt_fieldrepair",nil, true];
 	_veh setVariable["wmt_fieldrepair_times", (_veh getVariable ["wmt_fieldrepair_times",0]) + 1 , true ];
@@ -118,7 +119,7 @@ if (_repairFinished) then {
 	_veh setVariable["wmt_fieldrepair",_length, true];
 };
 
-WMT_mutexAction = false;  
+WMT_mutexAction = false;
 
 sleep 0.5;
 [false] call WMT_fnc_ProgressBar;
