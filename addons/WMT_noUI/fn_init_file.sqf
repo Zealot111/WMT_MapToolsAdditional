@@ -1,5 +1,6 @@
 diag_log "WMT_noUI started";
 //onMapSingleClick {if (_shift) then {};true};
+
 if (!isServer) exitWith{};
 [] spawn {
     WMT_Global_PatchesNames=[];
