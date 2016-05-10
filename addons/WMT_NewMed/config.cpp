@@ -9,7 +9,7 @@
 //Class WMT_NewMed : config.bin{
 class CfgPatches
 {
-	class NewMed
+	class WMT_NewMed
 	{
 		units[] = {};
 		weapons[] = {};
@@ -27,8 +27,8 @@ class CfgWeapons
 	class ItemCore;
 	class FirstAidKit: ItemCore
 	{
-		model = "\A3\Structures_F_EPA\Items\Medical\Bandage_F.p3d";
-		picture = "\NewMed\bandage_ca.paa";
+		model = "\WMT_NewMed\data\med\red_FirstAidkit.p3d";
+		picture = "\WMT_NewMed\data\med\red_gear_firstaidkit_ca.paa";
 	};
 };
 //};
