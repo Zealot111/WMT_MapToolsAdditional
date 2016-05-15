@@ -100,6 +100,8 @@ while {(alive player) and ((player distance _startPos) < 0.4) and ((player dista
 	sleep 0.5;
 };
 
+[false] call WMT_fnc_ProgressBar;
+
 if (_repairFinished) then {
 	_hastk = [] call _fnc_hastk;
 
@@ -115,11 +117,10 @@ if (_repairFinished) then {
 
 	_veh setVariable["wmt_fieldrepair",nil, true];
 	_veh setVariable["wmt_fieldrepair_times", (_veh getVariable ["wmt_fieldrepair_times",0]) + 1 , true ];
+	localize("STR_REPAIR_FINISHED") call WMT_fnc_NotifyText;
 } else {
 	_veh setVariable["wmt_fieldrepair",_length, true];
+	localize("STR_REPAIR_INTERRUPTED") call WMT_fnc_NotifyText;
 };
 
 WMT_mutexAction = false;
-
-sleep 0.5;
-[false] call WMT_fnc_ProgressBar;

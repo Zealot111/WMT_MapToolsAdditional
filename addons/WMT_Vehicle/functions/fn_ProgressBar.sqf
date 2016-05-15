@@ -25,15 +25,11 @@ disableSerialization;
 PR(_display) = uiNamespace getVariable "wMT_Disaply_ProgressBar";
 
 
-if (typeName (_this select 0) == typeName true) then {
-		if (_this select 0) then {
-				if (isNil "_display") then {
-						("RscWMTProgressBar" call BIS_fnc_rscLayer) cutRsc ["RscWMTProgressBar","PLAIN"]; //show
-				};
-		} else {
-				if !(isNil "_display") then {
-						("RscWMTProgressBar" call BIS_fnc_rscLayer) cutText ["","PLAIN"]; //remove
-				};
+if (typeName (_this select 0) == typeName true && {!(_this select 0)}) then {
+	("RscWMTProgressBar" call BIS_fnc_rscLayer) cutText ["","PLAIN"]; //remove
+} else {
+		if (isNil "_display" || {isNull _display}) then {
+				("RscWMTProgressBar" call BIS_fnc_rscLayer) cutRsc ["RscWMTProgressBar","PLAIN"]; //show
 		};
 };
 

@@ -16,12 +16,16 @@ STR_NO_ENOGH_SKILLS,"You havent needed skill to perform full repair of this vehi
 STR_FREPAIR_MENU, "Field Repair: %1", "Полевой ремонт: %1"
 STR_WMT_INT_MENU, "WMT Interaction", "Меню взаимодействия WMT"
 
-STR_FIELDREPAIR_HELP, "When wheels or tracks of vehicle are damaged you can invoke Field Repair option throught WMT Interaction Menu (Left-WIN key by default). Field Repair lasts for 60-300 seconds (depends on damage) and fixes only wheels or tracks and vehicle engine. You can invoke Filed Repair only once for given vehicle for free, then you need Repair Kit in your inventory to perform it. Repair Kit remains after Fast Repair.", "Если колеса, гусеницы или двигатель повреждены, то вы можете вызвать Полевой Ремонт через Меню Взаимодействия WMT (по-умолчанию левая кнопка Win). Полевой ремонт длится 60-300 сек в зависимости от повреждений. Использовать Полевой Ремонт можно только 1 раз, после этого для его выполнения вам понадобится Ремкоплект. Ремкомплект при Полевом ремонте не расходуется."
+STR_FIELDREPAIR_HELP, "When wheels or tracks of vehicle are damaged you can invoke Field Repair option throught WMT Interaction Menu (Left-WIN key by default). Field Repair lasts for 60-300 seconds (depends on damage) and fixes only wheels or tracks and vehicle engine. You can invoke Filed Repair only once for given vehicle for free, then you need Repair Kit in your inventory to perform it. Repair Kit remains after Fast Repair.", "Если колеса, гусеницы или двигатель повреждены, то вы можете вызвать Полевой Ремонт через Меню Взаимодействия WMT (по-умолчанию левая кнопка Win). Полевой ремонт длится 60-300 сек в зависимости от повреждений. Использовать Полевой Ремонт можно только 1 раз для каждого транспорта, после этого для его выполнения вам понадобится Ремкоплект. Ремкомплект при Полевом ремонте не расходуется."
+STR_DRAG_HELP, "You can move static weapons through WMT Interaction Menu (Left-WIN key by default). You must be close to static weapon to use this option.", "Вы можете передвигать статическое вооружение через Меню Взаимодействия WMT (по-умолчанию левая кнопка Win). Вы должны находиться близко к статическому оружию чтобы вызвать эту опцию."
 
 STR_DIARY_SCRIPTS, "Scripts", "Скрипты"
 
 
-STR_DRAG_STATIC, "Drag", "Перетащить"
+STR_CARRY_MENU, "Carry: %1", "Перетаскивание: %1"
+
+
+STR_DRAG_STATIC, "Drag Static Weapon", "Перемещение статического вооружения"
 STR_RELEASE_STATIC,"Drop %1", "Бросить %1"
 STR_BR_LOWGEAR,"High-climbing gear","Пониженная передача"
 STR_ACTION_LOWGEARON,"High-climbing gear on","Включить пониженную передачу"
