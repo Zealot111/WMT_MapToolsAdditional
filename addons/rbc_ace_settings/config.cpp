@@ -31,6 +31,11 @@ class ACE_Settings {
         force = 1;
         isClientSettable = 0;
     };
+    class ace_hearing_disableEarRinging {
+        value = 1;
+        isClieentSettable = 0;
+
+    };
 };
 
 class ACE_Medical_Actions {
