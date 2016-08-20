@@ -24,7 +24,7 @@ STR_DIARY_SCRIPTS, "Scripts", "Скрипты"
 
 STR_CARRY_MENU, "Carry: %1", "Перетаскивание: %1"
 
-
+STR_SERIOUS_REPAIR_MENU,"Full repair: %1","Капитальный ремонт: %1"
 STR_DRAG_STATIC, "Drag Static Weapon", "Перемещение статического вооружения"
 STR_RELEASE_STATIC,"Drop %1", "Бросить %1"
 STR_BR_LOWGEAR,"High-climbing gear","Пониженная передача"
