@@ -42,6 +42,17 @@ class CfgFunctions
 		};
 	};
 };
+
+class CfgMarkers {
+	
+	class Flag {};
+
+	class b_unknown : Flag {
+		shadow = 1;
+	};
+	
+};
+
 class cfgInGameUI
 {
 	class CommandBar
@@ -51,6 +62,7 @@ class cfgInGameUI
 	};
 	class Cursor
 	{
+		size = "0";
 		select = "\WMT_noUI\empty.paa";
 		leader = "\WMT_noUI\empty.paa";
 		mission = "\WMT_noUI\empty.paa";
